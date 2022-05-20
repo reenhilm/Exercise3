@@ -1,5 +1,6 @@
 ﻿try
 {
+    #region 3.1) Inkapsling
     //Ja, jag kommer åt dom publika variablerna efter jag instantierat en Person
     //1.
     //var person = new Person("Christian", "Rönnholm");
@@ -24,8 +25,9 @@
     personHandler.SetAge(person2, 40);
     personHandler.SetFName(person2, "Mirre");
     personHandler.SetLName(person2, "Rönnholm");
+    #endregion
 
-    //3.2) 1.
+    #region 3.2) Polymorfism
     var userErrorList = new List<UserError>()
     {
         new NumericInputError(),
@@ -37,6 +39,16 @@
 
     foreach(UserError e in userErrorList)
         Console.WriteLine(e.UEMessage());
+    #endregion
+
+    #region 3.3 Arv
+    Animal a = new Horse("Hästisen", weight: 100, age: 10);
+    Animal a2 = new Dog("Hundis", weight: 100, age: 10, loudness: 9223372036854775806);
+    Animal a3 = new Hedgehog("Hedgehoggen", weight: 100, age: 10, 1);
+    Animal a4 = new Worm("Wormen", weight: 100, age: 10, false);
+    Animal a5 = new Wolf("Wormen", weight: 100, age: 10, Wolf.Scaryness.yikes);
+    
+    #endregion
 
 }
 catch (ArgumentException ex)
