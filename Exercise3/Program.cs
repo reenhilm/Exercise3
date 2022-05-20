@@ -3,21 +3,31 @@
 try
 {
     //1.
-    var person = new Person("Christian", "Rönnholm");
-    person.Age = 40;
-    person.LName = "Test";
-    person.FName = "Test";
-    person.Weight = 100;
-    person.Height = 189;
+    //var person = new Person("Christian", "Rönnholm");
+    //person.Age = 40;
+    //person.LName = "Test";
+    //person.FName = "Test";
+    //person.Weight = 100;
+    //person.Height = 189;
 
     //2.
-    var personHandler = new PersonHandler();
-    personHandler.SetAge(person, 41);
+    //var personHandler = new PersonHandler();
+    //personHandler.SetAge(person, 41);
 
     //3.
-    var person2 = personHandler.CreatePerson(age: 41, "Christian", "Rönnholm", height: 189, weight: 100);
+    //var person2 = personHandler.CreatePerson(age: 41, "Christian", "Rönnholm", height: 189, weight: 100);
+
+    //5.
+    var personHandler = new PersonHandler();
+    var person1 = personHandler.CreatePerson(age: 41, "Christian", "Rönnholm", height: 189, weight: 100);
+    var person2 = personHandler.CreatePerson(age: 39, "Miranda", "Saarnio", height: 160, weight: 80);
+    personHandler.SetWeight(person1, 110);
+    personHandler.SetAge(person2, 40);
+    personHandler.SetFName(person2, "Mirre");
+    personHandler.SetLName(person2, "Rönnholm");
+
 }
-catch(ArgumentException ex)
+catch (ArgumentException ex)
 {
     Debug.WriteLine(ex.Message);
 }

@@ -1,4 +1,6 @@
-﻿public class Person
+﻿using Excercise3.BL;
+
+public class Person
 {
     int age;
     string fName = null!;
@@ -27,7 +29,7 @@
     public bool ValidateAge(int age)
     {
         if(age <= 0)
-            throw new ArgumentException("Age måste vara större än 0.");
+            throw new ArgumentException(Language.ValidateAgeArgumentException);
         return true;
     }
 
@@ -47,7 +49,7 @@
     public bool ValidateFName(string fName)
     {
         if (fName.Length < 2 || fName.Length > 10)
-            throw new ArgumentException("FName får inte vara mindre än 2 tecken eller längre än 10 tecken.");
+            throw new ArgumentException(Language.ValidateFNameArgumentException);
         return true;
     }
 
@@ -67,7 +69,7 @@
     public bool ValidateLName(string lName)
     {
         if (lName.Length < 3 || lName.Length > 15)
-            throw new ArgumentException("LName får inte vara mindre än 3 tecken eller större än 15tecken.");
+            throw new ArgumentException(Language.ValidateLNameArgumentException);
         return true;
     }
 

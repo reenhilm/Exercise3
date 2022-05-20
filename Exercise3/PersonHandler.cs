@@ -24,7 +24,12 @@
         pers.LName = lname;
     }
 
-    private int ConvertDoubleToInt(double dValue) => Convert.ToInt32(dValue);
+    /// <summary>
+    /// Using guessed businessrule that we should rounds uneven double to closest int
+    /// </summary>
+    /// <param name="dValue"></param>
+    /// <returns>rounded to closest int</returns>
+    public int ConvertDoubleToInt(double dValue) => Convert.ToInt32(dValue);
 
     public void SetHeight(Person pers, double height)
     {
