@@ -1,4 +1,4 @@
-﻿internal class PersonHandler
+﻿public class PersonHandler
 {
     public void SetAge(Person pers, int age)
     {
