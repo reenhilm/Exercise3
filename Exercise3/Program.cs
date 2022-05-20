@@ -13,6 +13,9 @@ try
     //2.
     var personHandler = new PersonHandler();
     personHandler.SetAge(person, 41);
+
+    //3.
+    var person2 = personHandler.CreatePerson(age: 41, "Christian", "Rönnholm", height: 189, weight: 100);
 }
 catch(ArgumentException ex)
 {

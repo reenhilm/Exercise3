@@ -15,7 +15,17 @@ namespace Excercise3.BL.Test
             var personHandler = new PersonHandler();
             personHandler.SetAge(person, 41);
 
-            Assert.Equal(person.Age, 41);
+            Assert.Equal(41, person.Age);
+        }
+
+        [Fact]
+        public void ValidateCreatePerson_WhenValid()
+        {
+            var personHandler = new PersonHandler();
+            var person = personHandler.CreatePerson(age: 41, "Christian", "Rönnholm", height: 189, weight: 100);
+
+            Assert.Equal(41, person.Age);
+            Assert.Equal("Christian", person.FName);
         }
     }
 }
