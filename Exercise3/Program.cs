@@ -1,7 +1,6 @@
-﻿//Ja, jag kommer åt dom publika variablerna efter jag instantierat en Person
-
-try
+﻿try
 {
+    //Ja, jag kommer åt dom publika variablerna efter jag instantierat en Person
     //1.
     //var person = new Person("Christian", "Rönnholm");
     //person.Age = 40;
@@ -25,6 +24,19 @@ try
     personHandler.SetAge(person2, 40);
     personHandler.SetFName(person2, "Mirre");
     personHandler.SetLName(person2, "Rönnholm");
+
+    //3.2) 1.
+    var userErrorList = new List<UserError>()
+    {
+        new NumericInputError(),
+        new TextInputError(),
+        new DateInputError(),
+        new EmailInputError(),
+        new ZipcodeInputError()
+    };
+
+    foreach(UserError e in userErrorList)
+        Console.WriteLine(e.UEMessage());
 
 }
 catch (ArgumentException ex)

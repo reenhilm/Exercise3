@@ -1,6 +1,4 @@
-﻿using Excercise3.BL;
-
-public class Person
+﻿public class Person
 {
     int age;
     string fName = null!;
