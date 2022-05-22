@@ -12,4 +12,9 @@
         this.Weight = weight;
         this.Age = age;
     }
+
+    public virtual string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}";
+    }
 }

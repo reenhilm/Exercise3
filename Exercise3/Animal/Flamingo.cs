@@ -5,4 +5,8 @@
     {
         Pinkness = pinkness;
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, WingSpan: {base.WingSpan}, Pinkness: {Pinkness}";
+    }
 }

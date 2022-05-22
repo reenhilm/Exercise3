@@ -10,4 +10,8 @@
     {
         Console.Write("squeak");
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, NrOfSpikes: {NrOfSpikes}";
+    }
 }

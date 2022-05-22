@@ -5,4 +5,8 @@
     {
         Beaksize = beaksize;
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, WingSpan: {base.WingSpan}, Beaksize: {Beaksize}";
+    }
 }

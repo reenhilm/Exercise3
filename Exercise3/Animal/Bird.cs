@@ -10,4 +10,8 @@
     {
         Console.Write("tweet/twitter/cheep/chirp");
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, WingSpan: {WingSpan}";
+    }
 }

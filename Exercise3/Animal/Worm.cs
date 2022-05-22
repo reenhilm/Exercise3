@@ -10,4 +10,8 @@
     {
         Console.Write("do they even make sound?");
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, IsPoisonous: {IsPoisonous}";
+    }
 }

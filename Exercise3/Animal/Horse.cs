@@ -10,4 +10,8 @@
     {
         Console.Write("neigh");
     }
+    public override string Stats()
+    {
+        return $"Name:{Name}, Weight: {Weight}, Age: {Age}, CanGalopp: {CanGalopp}";
+    }
 }
